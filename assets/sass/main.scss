@@ -511,10 +511,47 @@ footer {
   }
 }
 
-// modifiche per schermi > xxl
+// modifiche per schermi > 2xl
 @media (min-width: 1400px) {
+  .header {
+    padding: 70px 40px;
+  }
   .about img {
     max-width: 25%;
     max-height: 25%;
+  }
+  .footer {
+    padding: 70px 0px 35px 0px;
+  }
+}
+
+// modifiche per schermi > 3xl
+@media (min-width: 1700px) {
+  .header {
+    padding: 80px 50px;
+  }
+  section {
+    max-width: 90%;
+  }
+}
+
+// modifiche per schermi > 4xl
+@media (min-width: 2000px) {
+  .header {
+    justify-content: space-around;
+    padding: 80px 0px;
+  }
+  section {
+    max-width: 80%;
+  }
+}
+
+// modifiche per schermi > 5xl
+@media (min-width: 2300px) {
+  .header {
+    padding: 70px 50px;
+  }
+  section {
+    max-width: 70%;
   }
 }
