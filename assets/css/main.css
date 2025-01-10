@@ -164,8 +164,7 @@ section h2 {
 
 .progetti .tutte-cards {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 .progetti .card {
   width: 60%;
@@ -177,8 +176,8 @@ section h2 {
   margin-bottom: 40px;
 }
 .progetti .card img {
-  max-width: 150px;
-  max-height: 150px;
+  width: 200px;
+  height: 150px;
   padding: 10px;
   text-align: center;
 }
@@ -236,6 +235,9 @@ footer nav a {
   section h2 {
     font-size: 22px;
   }
+  .tutte-cards .card {
+    width: 70%;
+  }
   .contatti .nav-buttons {
     width: 80%;
   }
@@ -291,14 +293,10 @@ footer nav a {
   .core section h2 {
     font-size: 27px;
   }
-  .core .tutte-cards {
-    flex-direction: row;
-    justify-content: space-around;
-    flex: wrap;
-  }
   .core .tutte-cards .card {
+    width: 50%;
     line-height: 30px;
-    margin-right: 20px;
+    height: 400px;
   }
   .core .contatti .nav-buttons {
     width: 60%;
@@ -342,8 +340,8 @@ footer nav a {
     font-size: 28px;
   }
   .core .card img {
-    max-width: 200px;
-    max-height: 200px;
+    width: 250px;
+    height: 200px;
   }
   footer p, footer .skills-livello span, .skills-livello footer span {
     margin-left: 100px;

@@ -215,11 +215,10 @@ section {
   @extend .skills;
   .tutte-cards {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
   }
   .card {
-    width:60%;
+    width: 60%;
     border: 2px solid gray;
     box-shadow: 5px 5px 5px gray;
     line-height: 30px;
@@ -228,8 +227,8 @@ section {
     margin-bottom: 40px;
 
     img {
-      max-width: 150px;
-      max-height: 150px;
+      width: 200px;
+      height: 150px;
       padding: 10px;
       text-align: center;
     }
@@ -299,7 +298,11 @@ footer {
   section h2 {
     font-size: 22px;
   }
-
+  .tutte-cards{
+    .card {
+      width: 70%;
+    }
+  }
   .contatti .nav-buttons {
     width: 80%;
   }  
@@ -318,6 +321,7 @@ footer {
   .about p {
     font-size: 14px;
   }
+  
   footer p {
     font-size: 9px;
   }
@@ -369,16 +373,13 @@ footer {
     }
 
     .tutte-cards {
-      flex-direction: row;
-      justify-content: space-around;
-      flex: wrap;
       .card {
+        width: 50%;
         line-height: 30px;
-        margin-right: 20px;
+        height: 400px;
       }
     }
 
-  
     .contatti{
       .nav-buttons{
         width: 60%;
@@ -434,8 +435,8 @@ footer {
 
     .card {
       img {
-        max-width: 200px;
-        max-height: 200px;
+        width: 250px;
+        height: 200px;
       }
     }
   }
