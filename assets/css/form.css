@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-style: "Roboto", sans-serif;
+  background-color: rgb(30, 30, 30);
+  padding-top: 25px;
+  overflow-x: hidden;
+}
+
+main {
+  width: 93.5%;
+  margin: 0px auto;
+}
+
+form {
+  margin: 60px 0px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px black;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  margin: 5px auto;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: rgb(30, 30, 30);
+}
+
+.riga, .radio {
+  margin-bottom: 20px;
+  display: flex;
+}
+.riga .etichetta, .radio .etichetta {
+  width: 25.5%;
+}
+.riga .dati, .radio .dati {
+  width: 59.5%;
+  padding-left: 5px;
+}
+
+.radio label {
+  margin-left: 3px;
+  margin-right: 10px;
+}
+
+textarea {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-left: 5px;
+  max-width: 85%;
+  min-height: 150px;
+}
+
+.riga-btn #submit {
+  width: 85%;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  padding: 6px;
+  border: 1px solid rgb(30, 30, 30);
+  border-radius: 5px;
+  margin-right: 20px;
+  font-size: 17px;
+}
+.riga-btn #submit:hover {
+  background-color: rgb(50, 50, 50);
+}
+.riga-btn #submit:active {
+  background-color: rgb(140, 140, 140);
+}
+
+@media (max-width: 400px) {
+  body {
+    background-color: white;
+    padding: 20px 0px;
+  }
+  main {
+    width: 100%;
+  }
+  form {
+    box-shadow: none;
+    border-radius: 0%;
+    margin: 10px;
+  }
+  form legend {
+    font-size: 28px;
+  }
+}
+@media (max-width: 361px) {
+  label, #email, #messaggio {
+    font-size: 15px;
+  }
+  .riga-btn #submit {
+    font-size: 15px;
+  }
+}
+@media (min-width: 576px) {
+  main {
+    width: 77.5%;
+  }
+  fieldset {
+    padding: 15px 25px;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    width: 59.5%;
+  }
+  fieldset {
+    padding: 15px 30px;
+  }
+}
+@media (min-width: 992px) {
+  main {
+    width: 51%;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    width: 42.5%;
+  }
+  fieldset {
+    padding: 15px 45px;
+  }
+}
+@media (min-width: 1400px) {
+  main {
+    width: 34%;
+  }
+}
+@media (min-width: 1700px) {
+  main {
+    width: 30%;
+  }
+}
+@media (min-width: 2000px) {
+  main {
+    width: 28%;
+  }
+}
+@media (min-width: 2300px) {
+  main {
+    width: 26%;
+  }
+}

@@ -1,0 +1,334 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+$primary-color : rgb(35,35,35);
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $primary-color;
+  overflow-x: hidden;
+}
+
+.cv {
+  padding: 10px 20px;
+  background-color: white;
+  margin: auto;
+  width: 100%;
+}
+
+
+.informazioni-personali {
+  padding-top: 20px;
+  display: flex;
+  margin-bottom: 20px;
+
+  .profilo {
+    max-height: 140px;
+    max-width: 42%;
+    margin-right: 20px;
+  }
+
+  .generalita {
+    max-width: 58%;
+    line-height: 20px;
+    h1 {
+      font-size: 19px;
+    }
+
+    ul {
+      padding-left: 0px;
+    }
+
+    li {
+      list-style-type:none ;
+      
+      img {
+        max-width: 12px;
+      }
+      span {
+        font-size: 10px;
+      }
+
+      a {
+        @extend span;
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+// struttura ripetuta per ogni section
+.lavoro {
+  margin-bottom: 20px;
+  h2 {
+    font-size: 17px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+  }
+}
+
+// struttura ripetuta per lavori ed istruzione
+.esperienza {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  .titolo {
+    font-size: 15px;
+    max-width: 66%;
+  }
+
+  .data {
+    font-size: 13px;
+    max-width: 34%;
+  }
+}
+
+.descrizione {
+  font-size: 13px;
+  max-width: 90%;
+}
+
+.istruzione {
+  @extend .lavoro;
+}
+
+// sezione hard skills
+.competenze {
+  @extend .lavoro;
+
+  .lista {
+    display: flex;
+    
+    ul {
+      width: 50%;
+
+      li {
+        list-style-type: square;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+// sezione competenze linguistiche
+.lingue {
+  @extend .lavoro;
+
+  th, td {
+    font-size: 13px;
+  } 
+}
+
+.autorizzazione {
+  margin-top: 40px;
+  p {
+    font-size: 8px;
+  }
+}
+
+
+// modifiche per smartphone piccoli
+@media (max-width:400px) {
+  .informazioni-personali {
+    .profilo {
+      max-height: 120px;
+    }
+    .generalita {
+      line-height: 15px;
+      h1 {
+        font-size: 18px;
+      }
+      li span {
+        font-size: 9px;
+      }
+    }
+  }
+
+  .lavoro h2 {
+    font-size: 16px;
+  }
+  
+  .esperienza {
+    .titolo {
+      font-size: 14px;
+    }
+    .data {
+      font-size: 12px;
+    }
+  }
+
+  .descrizione {
+    font-size: 12px;
+  }
+
+  .competenze .lista ul li {
+    font-size: 12px;
+  }
+
+  .lingue {
+    th, td{
+      font-size: 12px;
+    }
+  }
+
+  .autorizzazione p{
+    font-size: 7px;
+  }
+}
+
+// modifiche per smartphone foldable o molto piccoli
+@media (max-width:361px) {
+  .informazioni-personali {
+    .profilo {
+      max-height: 110px;
+    }
+    .generalita {
+      h1 {
+        font-size: 15px;
+      }
+      li span {
+        font-size: 8px;
+      }
+    }
+  }
+
+  .lavoro h2 {
+    font-size: 13px;
+  }
+  
+  .esperienza {
+    .titolo {
+      font-size: 11px;
+    }
+    .data {
+      font-size: 9px;
+    }
+  }
+
+  .descrizione {
+    font-size: 9px;
+  }
+
+  .competenze .lista ul li {
+    font-size: 9px;
+  }
+
+  .lingue {
+    th, td{
+      font-size: 9px;
+    }
+  }
+
+  .autorizzazione p{
+    font-size: 7px;
+  }
+}
+
+// modifiche per schermi > sm
+@media (min-width:576px) {
+  .cv {
+    margin: 30px auto;
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+    width: 91%;
+  }
+
+  .informazioni-personali {
+    .generalita {
+      line-height: 22px;
+      h1 {
+        font-size: 22px;
+      }
+      li span {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .lavoro h2 {
+    font-size: 19px;
+  }
+  
+  .esperienza {
+    .titolo {
+      font-size: 17px;
+    }
+    .data {
+      font-size: 15px;
+    }
+  }
+
+  .descrizione {
+    font-size: 15px;
+  }
+
+  .competenze .lista ul li {
+    font-size: 15px;
+  }
+
+  .lingue {
+    th, td{
+      font-size: 15px;
+    }
+  }
+
+  .autorizzazione p{
+    font-size: 10px;
+  }
+}
+
+
+// modifiche per schermi > md
+@media (min-width:768px) {
+  .cv {
+    width: 75%;
+  }
+}
+
+// modifiche per schermi > lg 
+@media (min-width:992px) {
+  .cv {
+    width: 58%;
+  }
+}
+
+// modifiche per schermi > xl 
+@media (min-width:1200px) {
+  .cv {
+    width: 50%;
+  }
+}
+
+// modifiche per schermi > 2xl 
+@media (min-width:1400px) {
+  .cv {
+    width: 41%;
+  }
+}
+
+// modifiche per schermi > 3xl
+@media (min-width: 1700px) {
+  .cv {
+    width: 38%;
+  }
+}
+
+// modifiche per schermi > 4xl
+@media (min-width: 2000px) {
+  .cv {
+    width: 35%;
+  }
+}
+
+// modifiche per schermi > 5xl
+@media (min-width: 2300px) {
+  .cv {
+    width: 28%;
+  }
+}

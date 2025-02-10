@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+body p, body .skills-livello span, .skills-livello body span {
+  font-size: 16px;
+}
+
+.button {
+  background-color: rgb(35, 35, 35);
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+.button:active {
+  background-color: rgb(140, 140, 140);
+}
+
+.header {
+  background-color: rgb(35, 35, 35);
+  padding: 50px 20px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.nome {
+  font-size: 30px;
+  padding-left: 10px;
+  float: left;
+  font-weight: 400;
+}
+.nome a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-icon {
+  border: 2px solid rgb(50, 50, 50);
+  padding: 15px 15px;
+  cursor: pointer;
+  position: relative;
+  float: right;
+}
+.menu-icon .nav-icon {
+  background-color: rgb(140, 140, 140);
+  display: block;
+  width: 20px;
+  height: 2px;
+  position: relative;
+}
+
+.header .menu-icon .nav-icon:before, .header .menu-icon .nav-icon:after {
+  background-color: rgb(140, 140, 140);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  position: absolute;
+  top: 5px;
+}
+.header .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+.menu-link {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  max-height: 0px;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  clear: both;
+}
+.menu-link li a {
+  text-decoration: none;
+  color: rgb(140, 140, 140);
+  padding: 15px;
+  display: block;
+}
+.menu-link li a:hover {
+  opacity: 0.8;
+}
+
+.header .menu-btn:checked ~ .menu-link {
+  max-height: 1000px;
+}
+
+.header .menu-btn:checked ~ .menu-icon {
+  border: 2px solid rgb(140, 140, 140);
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 10px 50px 10px;
+  border-bottom: 2px solid rgb(35, 35, 35);
+}
+.about .foto-profilo {
+  max-width: 30%;
+  max-height: 30%;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  box-shadow: 5px 5px 5px gray;
+}
+.about .descrizione {
+  margin-left: 10px;
+  font-style: italic;
+}
+
+section h2 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 25px;
+}
+
+.skills, .contatti, .progetti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid rgb(35, 35, 35);
+  padding: 50px 0px;
+}
+
+.skills-livello {
+  width: 90%;
+}
+.skills-livello .progress {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.skills-livello .progress .progress-bar {
+  background-color: rgb(35, 35, 35);
+}
+.skills-livello .progress #excel, .skills-livello .progress #postgres {
+  width: 75%;
+}
+.skills-livello .progress #github {
+  width: 50%;
+}
+
+.progetti .tutte-cards {
+  display: flex;
+  justify-content: center;
+}
+.progetti .card {
+  width: 60%;
+  border: 2px solid gray;
+  box-shadow: 5px 5px 5px gray;
+  line-height: 30px;
+  padding-bottom: 10px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+.progetti .card img {
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+  text-align: center;
+}
+.progetti .card-body h3 {
+  font-size: 20px;
+}
+
+.contatti {
+  border-bottom: none;
+  min-height: 300px;
+}
+.contatti p, .contatti .skills-livello span, .skills-livello .contatti span {
+  margin-bottom: 30px;
+  width: 80%;
+  text-align: center;
+}
+.contatti .nav-buttons {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0px 25px 0px;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  border: 2px solid rgb(35, 35, 35);
+}
+footer p, footer .skills-livello span, .skills-livello footer span {
+  width: 30%;
+  font-size: 11px;
+  margin-left: 30px;
+}
+footer nav {
+  margin: 0px 30px 20px 0px;
+}
+footer nav a {
+  padding: 0px;
+  text-decoration: none;
+}
+
+@media (max-width: 400px) {
+  body p, body .skills-livello span, .skills-livello body span {
+    font-size: 15px;
+  }
+  .button {
+    font-size: 15px;
+  }
+  header .nome {
+    font-size: 27px;
+  }
+  section h2 {
+    font-size: 22px;
+  }
+  .tutte-cards .card {
+    width: 70%;
+  }
+  .contatti .nav-buttons {
+    width: 80%;
+  }
+  footer p, footer .skills-livello span, .skills-livello footer span {
+    font-size: 10px;
+  }
+}
+@media (max-width: 361px) {
+  header .nome {
+    font-size: 24px;
+  }
+  .about p, .about .skills-livello span, .skills-livello .about span {
+    font-size: 14px;
+  }
+  footer p, footer .skills-livello span, .skills-livello footer span {
+    font-size: 9px;
+  }
+}
+@media (min-width: 768px) {
+  .button {
+    padding: 10px 14px;
+    font-size: 17px;
+  }
+  body p, body .skills-livello span, .skills-livello body span {
+    font-size: 17px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    align-items: center;
+  }
+  .header .nome {
+    font-size: 33px;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .header .menu-link {
+    max-height: 1000px;
+    display: flex;
+  }
+  .core {
+    display: block;
+    max-width: 80%;
+  }
+  .core .about {
+    padding: 50px 0px;
+  }
+  .core .about p, .core .about .skills-livello span, .skills-livello .core .about span {
+    font-size: 18px;
+  }
+  .core section h2 {
+    font-size: 27px;
+  }
+  .core .tutte-cards .card {
+    width: 50%;
+    line-height: 30px;
+    height: 400px;
+  }
+  .core .contatti .nav-buttons {
+    width: 60%;
+  }
+  footer {
+    justify-content: space-around;
+  }
+  footer p, footer .skills-livello span, .skills-livello footer span {
+    font-size: 12px;
+    margin-left: 0px;
+  }
+  footer nav {
+    margin-right: 0px;
+  }
+}
+@media (min-width: 993px) {
+  .button {
+    font-size: 18px;
+  }
+  body p, body .skills-livello span, .skills-livello body span {
+    font-size: 18px;
+  }
+  .header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .header .nome {
+    font-size: 36px;
+  }
+  .header li a {
+    font-size: 18px;
+  }
+  .core {
+    display: block;
+    max-width: 70%;
+  }
+  .core .about p, .core .about .skills-livello span, .skills-livello .core .about span {
+    font-size: 20px;
+  }
+  .core section h2 {
+    font-size: 28px;
+  }
+  .core .card img {
+    width: 250px;
+    height: 200px;
+  }
+  footer p, footer .skills-livello span, .skills-livello footer span {
+    margin-left: 100px;
+    margin-right: 300px;
+    font-size: 13px;
+  }
+  footer nav {
+    margin-right: 100px;
+  }
+  footer nav a {
+    margin: 5px;
+  }
+}
+@media (min-width: 1201px) {
+  .button {
+    font-size: 19px;
+  }
+  body p, body .skills-livello span, .skills-livello body span {
+    font-size: 19px;
+  }
+  .header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .header .nome {
+    font-size: 39px;
+  }
+  .header li a {
+    font-size: 19px;
+  }
+  .core {
+    display: block;
+    max-width: 60%;
+  }
+  .core .about p, .core .about .skills-livello span, .skills-livello .core .about span {
+    font-size: 22px;
+  }
+  .core section h2 {
+    font-size: 29px;
+  }
+  .core .card {
+    line-height: 35px;
+  }
+  .core .contatti .nav-buttons {
+    width: 50%;
+  }
+  footer p, footer .skills-livello span, .skills-livello footer span {
+    font-size: 14px;
+    margin-right: 450px;
+  }
+  footer nav {
+    margin-right: 150px;
+  }
+}
+@media (min-width: 1400px) {
+  .header {
+    padding: 70px 40px;
+  }
+  .about img {
+    max-width: 25%;
+    max-height: 25%;
+  }
+  .footer {
+    padding: 70px 0px 35px 0px;
+  }
+}
+@media (min-width: 1700px) {
+  .header {
+    padding: 80px 50px;
+  }
+  section {
+    max-width: 90%;
+  }
+}
+@media (min-width: 2000px) {
+  .header {
+    justify-content: space-around;
+    padding: 80px 0px;
+  }
+  section {
+    max-width: 80%;
+  }
+}
+@media (min-width: 2300px) {
+  .header {
+    padding: 70px 50px;
+  }
+  section {
+    max-width: 70%;
+  }
+}

@@ -1,0 +1,546 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary-color: rgb(35,35,35);
+$secondary-color: rgb(50,50,50);
+$third-color : rgb(140,140,140);
+
+body {
+  font-family: "Roboto", sans-serif ;
+
+  p {
+    font-size: 16px;
+  }
+}
+
+// stile per ogni button
+.button {
+  background-color: $primary-color;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: $secondary-color;
+}
+
+.button:active {
+  background-color: $third-color;
+}
+
+// stile generale header
+.header {
+  background-color: $primary-color;
+  padding: 50px 20px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+// logo e icona menu
+.nome {
+  font-size: 30px;
+  padding-left: 10px;
+  float: left;
+  font-weight: 400;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-icon {
+  border: 2px solid $secondary-color;
+  padding: 15px 15px;
+  cursor: pointer;
+  position: relative;
+  float: right;
+
+  .nav-icon {
+    background-color: $third-color;
+    display: block;
+    width: 20px;
+    height: 2px;
+    position: relative;
+  }
+}
+
+
+// extra lavoro per icon hamburger
+.header .menu-icon {
+
+ .nav-icon:before, .nav-icon:after {
+  background-color: $third-color;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  position: absolute;
+  top: 5px;
+ }
+
+ .nav-icon:after {
+  top: -5px;
+ }
+}
+
+// menu a scomparsa
+.menu-link {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  max-height: 0px;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  clear: both;
+  
+  li a {
+    text-decoration: none;
+    color: $third-color;
+    padding: 15px;
+    display: block;
+  }
+
+  li a:hover {
+    opacity: 0.8;
+  }
+}
+
+// transizione menu a scomparsa
+.header .menu-btn:checked ~ .menu-link {
+  max-height: 1000px;
+}
+.header .menu-btn:checked ~ .menu-icon {
+  border: 2px solid $third-color;
+}
+
+// sezione bio con descrizione
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 10px 50px 10px;
+  border-bottom: 2px solid $primary-color;
+
+  .foto-profilo {
+    max-width: 30%;
+    max-height: 30%;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    box-shadow: 5px 5px 5px gray;
+  }
+  
+  .descrizione {
+    margin-left: 10px;
+    font-style: italic;
+  }
+}
+
+// valido per ogni sezione
+section {
+  h2 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 25px;
+  }
+}
+
+// sezione skills con barre progressi
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid $primary-color;
+  padding: 50px 0px;
+}
+
+.skills-livello {
+  width:90%;
+
+  span {
+    @extend p;
+  }
+
+  .progress {
+    margin-bottom: 10px;
+    width: 100%;
+
+    .progress-bar {
+      background-color: $primary-color;
+    }
+
+    #excel {
+      width: 75%;
+    }
+
+    #postgres {
+      @extend #excel;
+    }
+
+    #github {
+      width: 50%;
+    }
+
+
+  }
+}
+
+// sezione progetti con cards
+.progetti {
+  @extend .skills;
+  .tutte-cards {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 60%;
+    border: 2px solid gray;
+    box-shadow: 5px 5px 5px gray;
+    line-height: 30px;
+    padding-bottom: 10px;
+    line-height: 25px;
+    margin-bottom: 40px;
+
+    img {
+      width: 200px;
+      height: 150px;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+
+  .card-body {
+    h3{
+      font-size: 20px;
+    }
+  }
+}
+
+// sezione contatti con link esterni
+.contatti {
+  @extend .skills;
+  border-bottom: none;
+  min-height: 300px;
+  p {
+    margin-bottom: 30px;
+    width: 80%;
+    text-align: center;
+  }
+
+  .nav-buttons {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+  }  
+}
+
+// sezione social con link esterni
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0px 25px 0px;
+  background-color: $primary-color;
+  color: white;
+  border: 2px solid $primary-color;
+
+  p {
+    width: 30%;
+    font-size: 11px;
+    margin-left: 30px;
+  }
+
+  nav {
+    margin: 0px 30px 20px 0px;
+    a {
+      padding: 0px;
+      text-decoration: none;
+    }
+  }
+}
+
+// modifiche per smartphone piccoli
+@media (max-width: 400px) {
+  body p{
+    font-size: 15px;
+  }
+  .button {
+    font-size: 15px;
+  }
+  header .nome {
+      font-size: 27px;
+  }
+  section h2 {
+    font-size: 22px;
+  }
+  .tutte-cards{
+    .card {
+      width: 70%;
+    }
+  }
+  .contatti .nav-buttons {
+    width: 80%;
+  }  
+
+  footer p {
+    font-size: 10px;
+  }
+}
+  
+
+// modifiche smartphone molto piccoli o foldable
+@media (max-width: 361px) {
+  header .nome {
+      font-size: 24px;
+  }
+  .about p {
+    font-size: 14px;
+  }
+  
+  footer p {
+    font-size: 9px;
+  }
+}
+
+// modifiche per schermi > md
+@media (min-width: 768px){
+  .button {
+    padding: 10px 14px;
+    font-size: 17px;
+  }
+  body p {
+    font-size: 17px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    align-items: center;
+
+    .nome {
+      font-size: 33px;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    .menu-link {
+      max-height: 1000px;
+      display: flex;
+    }
+  }
+
+  .core {
+    display: block;
+    max-width: 80%;
+
+    .about {
+      padding: 50px 0px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    section h2 {
+      font-size: 27px;
+    }
+
+    .tutte-cards {
+      .card {
+        width: 50%;
+        line-height: 30px;
+        height: 400px;
+      }
+    }
+
+    .contatti{
+      .nav-buttons{
+        width: 60%;
+      }
+    }
+  }
+
+  footer {
+    justify-content: space-around;
+    p {
+      font-size: 12px;
+      margin-left: 0px;
+    }
+    nav {
+      margin-right: 0px;
+    }
+  }
+}
+
+
+// modifiche per schermi > lg
+@media (min-width: 993px){
+  .button {
+    font-size: 18px;
+  }
+
+  body p {
+    font-size: 18px;
+  }
+  .header{
+    padding-left: 40px;
+    padding-right: 40px;
+    .nome  {
+      font-size: 36px;
+    }
+
+    li a {
+      font-size: 18px;
+    }
+  }
+
+  .core {
+    display: block;
+    max-width: 70%;
+
+    .about p {
+      font-size: 20px;
+    }
+
+    section h2 {
+      font-size: 28px;
+    }
+
+    .card {
+      img {
+        width: 250px;
+        height: 200px;
+      }
+    }
+  }
+
+  footer {
+    p {
+    margin-left: 100px;
+    margin-right: 300px;
+    font-size: 13px;
+    }
+    nav {
+    margin-right: 100px;
+      a {
+        margin: 5px;
+      }
+   }
+  }
+}
+
+// modifiche per schermi > xl
+@media (min-width: 1201px){
+  .button {
+    font-size: 19px;
+  }
+
+  body p {
+    font-size: 19px;
+  }
+
+  .header{
+    padding-left: 60px;
+    padding-right: 60px;
+    .nome  {
+      font-size: 39px;
+    }
+    li a {
+      font-size: 19px;
+    }
+  }
+
+  .core {
+    display: block;
+    max-width: 60%;
+
+    .about p {
+      font-size: 22px;
+    }
+  
+    section h2 {
+      font-size: 29px;
+    }
+
+    .card {
+      line-height: 35px;
+    }
+
+    .contatti {
+       .nav-buttons {
+        width: 50%;
+       }
+    }
+  }
+
+  footer {
+    p {
+    font-size: 14px;
+    margin-right: 450px;
+    }
+    nav {
+      margin-right: 150px;
+    }
+  }
+}
+
+// modifiche per schermi > 2xl
+@media (min-width: 1400px) {
+  .header {
+    padding: 70px 40px;
+  }
+  .about img {
+    max-width: 25%;
+    max-height: 25%;
+  }
+  .footer {
+    padding: 70px 0px 35px 0px;
+  }
+}
+
+// modifiche per schermi > 3xl
+@media (min-width: 1700px) {
+  .header {
+    padding: 80px 50px;
+  }
+  section {
+    max-width: 90%;
+  }
+}
+
+// modifiche per schermi > 4xl
+@media (min-width: 2000px) {
+  .header {
+    justify-content: space-around;
+    padding: 80px 0px;
+  }
+  section {
+    max-width: 80%;
+  }
+}
+
+// modifiche per schermi > 5xl
+@media (min-width: 2300px) {
+  .header {
+    padding: 70px 50px;
+  }
+  section {
+    max-width: 70%;
+  }
+}

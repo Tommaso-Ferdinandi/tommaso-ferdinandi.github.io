@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(35, 35, 35);
+  overflow-x: hidden;
+}
+
+.cv {
+  padding: 10px 20px;
+  background-color: white;
+  margin: auto;
+  width: 100%;
+}
+
+.informazioni-personali {
+  padding-top: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+.informazioni-personali .profilo {
+  max-height: 140px;
+  max-width: 42%;
+  margin-right: 20px;
+}
+.informazioni-personali .generalita {
+  max-width: 58%;
+  line-height: 20px;
+}
+.informazioni-personali .generalita h1 {
+  font-size: 19px;
+}
+.informazioni-personali .generalita ul {
+  padding-left: 0px;
+}
+.informazioni-personali .generalita li {
+  list-style-type: none;
+}
+.informazioni-personali .generalita li img {
+  max-width: 12px;
+}
+.informazioni-personali .generalita li span, .informazioni-personali .generalita li a {
+  font-size: 10px;
+}
+.informazioni-personali .generalita li a {
+  text-decoration: none;
+  color: black;
+}
+
+.lavoro, .lingue, .competenze, .istruzione {
+  margin-bottom: 20px;
+}
+.lavoro h2, .lingue h2, .competenze h2, .istruzione h2 {
+  font-size: 17px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+.esperienza {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.esperienza .titolo {
+  font-size: 15px;
+  max-width: 66%;
+}
+.esperienza .data {
+  font-size: 13px;
+  max-width: 34%;
+}
+
+.descrizione {
+  font-size: 13px;
+  max-width: 90%;
+}
+
+.competenze .lista {
+  display: flex;
+}
+.competenze .lista ul {
+  width: 50%;
+}
+.competenze .lista ul li {
+  list-style-type: square;
+  font-size: 13px;
+}
+
+.lingue th, .lingue td {
+  font-size: 13px;
+}
+
+.autorizzazione {
+  margin-top: 40px;
+}
+.autorizzazione p {
+  font-size: 8px;
+}
+
+@media (max-width: 400px) {
+  .informazioni-personali .profilo {
+    max-height: 120px;
+  }
+  .informazioni-personali .generalita {
+    line-height: 15px;
+  }
+  .informazioni-personali .generalita h1 {
+    font-size: 18px;
+  }
+  .informazioni-personali .generalita li span, .informazioni-personali .generalita li a {
+    font-size: 9px;
+  }
+  .lavoro h2, .istruzione h2, .competenze h2, .lingue h2 {
+    font-size: 16px;
+  }
+  .esperienza .titolo {
+    font-size: 14px;
+  }
+  .esperienza .data {
+    font-size: 12px;
+  }
+  .descrizione {
+    font-size: 12px;
+  }
+  .competenze .lista ul li {
+    font-size: 12px;
+  }
+  .lingue th, .lingue td {
+    font-size: 12px;
+  }
+  .autorizzazione p {
+    font-size: 7px;
+  }
+}
+@media (max-width: 361px) {
+  .informazioni-personali .profilo {
+    max-height: 110px;
+  }
+  .informazioni-personali .generalita h1 {
+    font-size: 15px;
+  }
+  .informazioni-personali .generalita li span, .informazioni-personali .generalita li a {
+    font-size: 8px;
+  }
+  .lavoro h2, .istruzione h2, .competenze h2, .lingue h2 {
+    font-size: 13px;
+  }
+  .esperienza .titolo {
+    font-size: 11px;
+  }
+  .esperienza .data {
+    font-size: 9px;
+  }
+  .descrizione {
+    font-size: 9px;
+  }
+  .competenze .lista ul li {
+    font-size: 9px;
+  }
+  .lingue th, .lingue td {
+    font-size: 9px;
+  }
+  .autorizzazione p {
+    font-size: 7px;
+  }
+}
+@media (min-width: 576px) {
+  .cv {
+    margin: 30px auto;
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+    width: 91%;
+  }
+  .informazioni-personali .generalita {
+    line-height: 22px;
+  }
+  .informazioni-personali .generalita h1 {
+    font-size: 22px;
+  }
+  .informazioni-personali .generalita li span, .informazioni-personali .generalita li a {
+    font-size: 13px;
+  }
+  .lavoro h2, .istruzione h2, .competenze h2, .lingue h2 {
+    font-size: 19px;
+  }
+  .esperienza .titolo {
+    font-size: 17px;
+  }
+  .esperienza .data {
+    font-size: 15px;
+  }
+  .descrizione {
+    font-size: 15px;
+  }
+  .competenze .lista ul li {
+    font-size: 15px;
+  }
+  .lingue th, .lingue td {
+    font-size: 15px;
+  }
+  .autorizzazione p {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .cv {
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .cv {
+    width: 58%;
+  }
+}
+@media (min-width: 1200px) {
+  .cv {
+    width: 50%;
+  }
+}
+@media (min-width: 1400px) {
+  .cv {
+    width: 41%;
+  }
+}
+@media (min-width: 1700px) {
+  .cv {
+    width: 38%;
+  }
+}
+@media (min-width: 2000px) {
+  .cv {
+    width: 35%;
+  }
+}
+@media (min-width: 2300px) {
+  .cv {
+    width: 28%;
+  }
+}
